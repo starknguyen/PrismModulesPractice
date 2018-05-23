@@ -1,4 +1,5 @@
 ﻿using ModuleA;
+using ModuleB;
 using Prism.Modularity;
 using Prism.Unity;
 using System.Windows;
@@ -22,6 +23,7 @@ namespace Modules.UI
             ModuleCatalog catalog = new ModuleCatalog();
 
             catalog.AddModule(typeof(ModuleAController));
+            catalog.AddModule(typeof(ModuleBController));
 
             return catalog;
         }

@@ -133,6 +133,10 @@
       <Project>{CF1327A0-F5CB-4115-ADA1-F8D916A1997F}</Project>
       <Name>ModuleA</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ModuleB\ModuleB.csproj">
+      <Project>{E8C060C7-4A12-4FCF-BA85-4D1AD61529B2}</Project>
+      <Name>ModuleB</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Modules.Infrastructure\Modules.Infrastructure.csproj">
       <Project>{00dab792-f17f-4cdc-b8df-9e457506426a}</Project>
       <Name>Modules.Infrastructure</Name>

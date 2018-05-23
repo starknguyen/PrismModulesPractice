@@ -9,6 +9,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="700" Width="900">
     <Grid>
-        <ContentControl prism:RegionManager.RegionName="{x:Static infra:RegionNames.ContentRegion}" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        
+        <ContentControl Grid.Column="0" prism:RegionManager.RegionName="{x:Static infra:RegionNames.LeftRegion}" />
+        <ContentControl Grid.Column="1" prism:RegionManager.RegionName="{x:Static infra:RegionNames.RightRegion}" />
     </Grid>
 </Window>

@@ -28,7 +28,7 @@ namespace ModuleB
             _container.RegisterType<IModuleBViewModel, ModuleBViewModel>();
             _container.RegisterType<IModuleBView, ModuleBView>();
 
-            IRegion region = _regionManager.Regions[RegionNames.ContentRegion];
+            IRegion region = _regionManager.Regions[RegionNames.RightRegion];
             region.Add(_container.Resolve<IModuleBViewModel>().View);
         }
     }

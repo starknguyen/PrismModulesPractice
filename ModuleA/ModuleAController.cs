@@ -28,7 +28,7 @@ namespace ModuleA
             _container.RegisterType<IModuleAViewModel, ModuleAViewModel>();
             _container.RegisterType<IModuleAView, ModuleAView>();
 
-            _regionManager.RegisterViewWithRegion(RegionNames.ContentRegion,
+            _regionManager.RegisterViewWithRegion(RegionNames.LeftRegion,
                                                 () => _container.Resolve<IModuleAViewModel>().View);
         }
     }
