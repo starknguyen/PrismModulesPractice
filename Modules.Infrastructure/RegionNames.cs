@@ -11,5 +11,7 @@ namespace Modules.Infrastructure
         public static String LeftRegion = "Left_Region";
 
         public static String RightRegion = "Right_Region";
+
+        public static String BottomRegion = "Bottom_Region";
     }
 }

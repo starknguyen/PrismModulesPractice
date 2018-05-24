@@ -4,18 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{95EED83E-A06E-4566-A9F8-90D6B890E7F6}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <ProjectGuid>{59C31741-3FC5-44B1-8B4B-CED9A1588F1A}</ProjectGuid>
+    <OutputType>library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Modules.UI</RootNamespace>
-    <AssemblyName>Modules.UI</AssemblyName>
+    <RootNamespace>ModuleButtons</RootNamespace>
+    <AssemblyName>ModuleButtons</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -25,7 +24,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -54,10 +52,6 @@
       <HintPath>..\packages\Prism.Core.6.3.0\lib\net45\Prism.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Prism.Unity.Wpf, Version=6.3.0.0, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
-      <HintPath>..\packages\Prism.Unity.6.3.0\lib\net45\Prism.Unity.Wpf.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Prism.Wpf, Version=6.3.0.0, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
       <HintPath>..\packages\Prism.Wpf.6.3.0\lib\net45\Prism.Wpf.dll</HintPath>
       <Private>True</Private>
@@ -82,23 +76,15 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Compile Include="ModuleButtonsController.cs" />
+    <Compile Include="ViewModels\ButtonsViewModel.cs" />
+    <Compile Include="Views\ButtonsView.xaml.cs">
+      <DependentUpon>ButtonsView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\ButtonsView.xaml">
       <SubType>Designer</SubType>
-    </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Bootstrapper.cs" />
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -126,21 +112,6 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ModuleA\ModuleA.csproj">
-      <Project>{CF1327A0-F5CB-4115-ADA1-F8D916A1997F}</Project>
-      <Name>ModuleA</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ModuleButtons\ModuleButtons.csproj">
-      <Project>{59C31741-3FC5-44B1-8B4B-CED9A1588F1A}</Project>
-      <Name>ModuleButtons</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ModuleB\ModuleB.csproj">
-      <Project>{E8C060C7-4A12-4FCF-BA85-4D1AD61529B2}</Project>
-      <Name>ModuleB</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Modules.Infrastructure\Modules.Infrastructure.csproj">
       <Project>{00dab792-f17f-4cdc-b8df-9e457506426a}</Project>
       <Name>Modules.Infrastructure</Name>

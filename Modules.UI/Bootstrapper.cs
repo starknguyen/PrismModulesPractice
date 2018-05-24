@@ -1,5 +1,6 @@
 ﻿using ModuleA;
 using ModuleB;
+using ModuleButtons;
 using Prism.Modularity;
 using Prism.Unity;
 using System.Windows;
@@ -24,6 +25,7 @@ namespace Modules.UI
 
             catalog.AddModule(typeof(ModuleAController));
             catalog.AddModule(typeof(ModuleBController));
+            catalog.AddModule(typeof(ModuleButtonsController));
 
             return catalog;
         }
