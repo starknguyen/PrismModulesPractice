@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:ModuleB.Views"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300"
-             Background="AliceBlue">
+             Background="DarkSlateBlue">
     <Grid>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
             <TextBlock FontSize="16" Text="Code Name" HorizontalAlignment="Center"/>
